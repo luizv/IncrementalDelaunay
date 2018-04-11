@@ -17,13 +17,14 @@ Incremental Delaunay Triangulation implemented in **Swift 4.0**. It a kind-of a 
 - [x] Reset command;
 - [x] MIT Licensed.
 
-## Roadmap
+## Backlog
+- [ ] Need to clean the code, remove comments, etc.
 - [ ] Rename classes (Triangle, Circle, etc) to make difficult to conflict with _user-created-and-named_ objects.
 - [ ] _Investigate known bug:_ when vertexes are too close positioned or almost aligned, sometimes triangles appear to be formed violating the delaunay criteria. It's a rare event, probably related to rounding errors while placing points with touch pan gestures to close to one another. Nevertheless it's important to fix. Maybe a simpler fix would be multiply all cartesian plane's coordinates by a big number and make the calculations without incurring in rounding errors;
 - [ ] _Implement baricentric coordinates:_ touched triangles are, for now, found by testing each triangle _UIBelzierPath_ `.contains()` function. Performance-wise, it's not the best way of doing this. The best way would be implementing baricentric coordinates. It's already implemented but commented out from main code because the known bug mentioned earlier. Baricentric coordinates needed to have triangles with area different from zero;
 - [ ] Create & export proper .framework (maybe a pod?);
 - [ ] Make possible to remove points from mesh;
-- [ ] Change logic to encapsulate the generation of Supertriangle at the start of a new triangulation mesh.
+- [ ] Change logic to encapsulate the generation of _Supertriangle_ at the start of a new triangulation mesh.
 - [ ] Change _DelaunayTriangulation Class_ to permit multiple instances, and stop looking so much like a Singleton.
 
 ---
