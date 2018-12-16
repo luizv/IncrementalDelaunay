@@ -18,6 +18,7 @@ Incremental Delaunay Triangulation implemented in **Swift 4.0**. It a kind-of a 
 - [x] MIT Licensed.
 
 ## Backlog
+- [ ] Need hard refactor. It was developed in just one week without proper architecture.
 - [ ] Need to clean the code, remove comments, etc.
 - [ ] Rename classes (Triangle, Circle, etc) to make difficult to conflict with _user-created-and-named_ objects.
 - [ ] _Investigate known bug:_ when vertexes are too close positioned or almost aligned, sometimes triangles appear to be formed violating the delaunay criteria. It's a rare event, probably related to rounding errors while placing points with touch pan gestures to close to one another. Nevertheless it's important to fix. Maybe a simpler fix would be multiply all cartesian plane's coordinates by a big number and make the calculations without incurring in rounding errors;
